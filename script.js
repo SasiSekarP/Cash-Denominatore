@@ -77,7 +77,7 @@ btnEl.addEventListener('click', (e) => {
                 newLine.innerHTML = `<p class="box">No need to pay</p>`
             } else {
                 
-                BalanceMessageEl.textContent = `Balance Amount is ${balence}`;
+                BalanceMessageEl.textContent = `Balance Amount is ₹ ${balence}`;
 
                 for (let i = 0; i < MoneyArr.length; i++){
                     if (balence < MoneyArr[i]) {
@@ -93,7 +93,7 @@ btnEl.addEventListener('click', (e) => {
                     if (resultArr[i] != 0) {
                     let newLine = document.createElement('li');
                     resultEl.appendChild(newLine);
-                    newLine.innerHTML = `<p class="box">${MoneyArr[i]}</p><p class="box">${resultArr[i]}</p>`
+                    newLine.innerHTML = `<p class="box">₹ ${MoneyArr[i]}</p><p class="box">${resultArr[i]}</p>`
                     }
                 }
             }
