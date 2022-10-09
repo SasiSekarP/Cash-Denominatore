@@ -4,24 +4,50 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cash denomination</title>
     <!-- css -->
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <h1>Cash Denominator</h1>
-    <div class="form">
-        <div class="InputOne">
-            <label for="BillAmount">Bill Amount</label>
+    <div class="form" id="formControle">
+        <div class="InputOne" id="InputOne">
+            <label for="BillAmount">
+                Bill Amount
+            </label>
             <input type="number" id="BillAmount"/>
+            <p id="InputOneErrorMessage" class="none red">
+                mandatory
+            </p>
         </div>
-        <div class="InputTwo">
-            <label for="AmountPaid">Amount Paid</label>
+        <div class="InputTwo" id="InputTwo">
+            <label for="AmountPaid">
+                Amount Paid
+            </label>
             <input type="number" id="AmountPaid"/>
+            <p id="InputTwoErrorMessage" class="none red">
+                mandatory
+            </p>
         </div>
-        <div class="InputThree">
-            <button>Calculate</button>
+        <div class="InputThree" id="InputThree">
+            <button id="btn" type="submit">
+                Calculate
+            </button>
+        </div>
+        <div>
+        <p id="PayMore" class="PayMore red none">Pay Correct Amount</p>
+        </div>
+        <div class="resultContainer none" id="resultContainer">
+            <div id="result" class="result">
+                <li>
+                    <p class="box heading">Value</p>
+                    <p class="box heading">Count</p>
+                </li>
+            </div>
+            <button class="btn" onclick="location.reload()">New calculation</button>
         </div>
     </div>
+    <script src="./script.js"></script>
 </body>
 </html>
+
