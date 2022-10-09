@@ -1,3 +1,5 @@
+'use strict';
+
 // variable area
 
 var MoneyArr = [2000, 500, 200, 100, 50, 20, 10, 5, 2, 1];
@@ -20,6 +22,8 @@ let PayMoreEl = document.getElementById('PayMore');
 let resultEl = document.getElementById('result');
 
 let formControleEl = document.getElementById('formControle');
+
+let BalanceMessageEl = document.getElementById('BalanceMessage');
 
 // Funcation area
 
@@ -72,6 +76,9 @@ btnEl.addEventListener('click', (e) => {
                 resultEl.appendChild(newLine);
                 newLine.innerHTML = `<p class="box">No need to pay</p>`
             } else {
+                
+                BalanceMessageEl.textContent = `Balance Amount is ${balence}`;
+
                 for (let i = 0; i < MoneyArr.length; i++){
                     if (balence < MoneyArr[i]) {
                         resultArr.push(0)
